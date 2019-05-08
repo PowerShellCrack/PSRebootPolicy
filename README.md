@@ -1,6 +1,8 @@
 # PSRebootPolicy
 Reboot Policy using PowerShell and a modified verison of AppdeployToolkit
 
+![Alt_text](https://github.com/PowerShellCrack/PSRebootPolicy/edit/master/screenshots/rebootpolicy_firstprompt.png)
+
 # Goal
 I needed a way I can reboot a system but give the user 3 prompts before doing so at different time intevals. Also to report those responses to management. 
 
@@ -13,7 +15,7 @@ PSAppDeployToolkit (https://psappdeploytoolkit.com/) provided a interesting way 
 | Parameters          | Values     | Comments                 |
 |-------------------  |--------    |--------------------------|
 | AllowRebootPassThru  | True/False | Allows the 3010 return code (requires restart) to be passed back to the parent process (e.g. SCCM) if detected from an installation. If 3010 is passed back to SCCM, a reboot prompt will be triggered. |
-|EnableScriptTest     | True/False | Speeds up the reboot policy to 1 minute intervals between messages. Default is: $false. |
+|EnableScriptTest     | True/False | Speeds up the reboot policy to 2 minute intervals between messages. Default is: $false. |
 | IgnoreRebootCheck    | True/False  | Force the system to go through the reboot scenario no matter what. Use in conjunction with EnableScriptTest to allow quicker test of the full check. Default is: $false. |
 | ForcePendingReboot   | True/False  | Force the system reboot if a pending reboot is detected on system no matter the day it rebooted in the past. Ignores the RebootIntervalDays check as well. Default is: $false. |
 | ScriptDisabled       | True/False  | Disables the script from running. Also can be switched by seeting a registry key in HKLM\SOFTWARE\Policies\RebootPolicy with a key of DisableRebootPolicy of 1. Can be controlled by GPO. Default is: $false. |
