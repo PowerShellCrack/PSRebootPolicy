@@ -84,7 +84,8 @@ function Set-RebootTimer{
     }
     elseif($PassThru){
         #return the exit code of 3010 (aka reboot required)
-        Return 3010
+        Show-InstallationRestartPrompt -Countdownseconds $Seconds -CountdownNoHideSeconds 10 -Passthru
+        Exit-Script -ExitCode 3010
     }
     else {
         #Actually do the reboot
