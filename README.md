@@ -35,7 +35,7 @@ Script logs entries into the registry under `HKLM:SOFTWARE\Policies\<Company nam
 | RebootCountTotal     | Counter               | Record total times script has rebooted system
 
 ## Run Logging
-### There is a sub keys to record every instance and acton when ran using julian time format. It is located here: `HKLM:SOFTWARE\Policies\<Company name>\Logging\RunLog-<julianDate>`
+There is a sub keys to record every instance and acton when ran using julian time format. It is located here: `HKLM:SOFTWARE\Policies\<Company name>\Logging\RunLog-<julianDate>`
 
 | Entry               | Values     | Comments                 |
 |-------------------  |--------    |--------------------------|
@@ -50,7 +50,7 @@ Script logs entries into the registry under `HKLM:SOFTWARE\Policies\<Company nam
 |PromptActionResponse2 | Hide/Reboot   | Logs reponse for second prompt |
 
 ## GPO Policy
-### Script can also be controlled by a GPO policy. Key will be located here: `HKLM:SOFTWARE\Policies\RebootPolicy`
+Script can also be controlled by a GPO policy. Key will be located here: `HKLM:SOFTWARE\Policies\RebootPolicy`
 
 | Entry               | Values     | Comments                 |
 |-------------------  |--------    |--------------------------|
@@ -58,7 +58,8 @@ Script logs entries into the registry under `HKLM:SOFTWARE\Policies\<Company nam
 
 
 ## Status 
-| Value                  | Comments                 |
+Here are meanings of the status messages 
+| Value                  | Meaning               |
 |-------------------     |--------------------------|
 | Running                | Script is running |
 | Disabled               | Script is disabled either by GPO or ScriptDisabled parameter |
