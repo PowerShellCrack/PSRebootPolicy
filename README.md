@@ -58,7 +58,7 @@ Script can also be controlled by a GPO policy. Key will be located here: `HKLM:S
 
 | Entry               | Values     | Comments                 |
 |-------------------  |--------    |--------------------------|
-| DisableRebootPolicy  | 0/1 | Disabled the script entirely if set to 1, no matter what runs it
+| DisableRebootPolicy  | 0/1 | Disabled the script entirely if set to 1, no matter what runs it |
 
 
 ## Status 
