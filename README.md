@@ -63,6 +63,7 @@ Script can also be controlled by a GPO policy. Key will be located here: `HKLM:S
 
 ## Status 
 Here are meanings of the status messages 
+
 | Value                  | Meaning               |
 |------------------------|--------------------------|
 | Running                | Script is running |
