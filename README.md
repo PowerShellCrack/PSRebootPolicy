@@ -18,7 +18,7 @@ PSAppDeployToolkit (https://psappdeploytoolkit.com/) provided a interesting way 
 | ForcePendingReboot   | True/False  | Force the system reboot if a pending reboot is detected on system no matter the day it rebooted in the past. Ignores the RebootIntervalDays check as well. Default is: $false. |
 | ScriptDisabled       | True/False  | Disables the script from running. Also can be switched by seeting a registry key in HKLM\SOFTWARE\Policies\RebootPolicy with a key of DisableRebootPolicy of 1. Can be controlled by GPO. Default is: $false. |
 | RebootIntervalDays      | 1,3,5,7,14 | Compares the last reboot date timestamp to number specified; Default is: 7 days |
-| MaxReboots             | Doesn't allow script to reboot the system more than this number; Safety incase system need multple reboots; Default is: 2 times |
+| MaxReboots           | integer      | Doesn't allow script to reboot the system more than this number; Safety incase system need multple reboots; Default is: 2 times |
 
 ## Main Logging
 Script logs entries into the registry under "HKLM:SOFTWARE\Policies\<Company name>\Logging"
@@ -39,15 +39,15 @@ Script logs entries into the registry under "HKLM:SOFTWARE\Policies\<Company nam
 
 | Entry               | Values     | Comments                 |
 |-------------------  |--------    |--------------------------|
-| LastResult          | <Status>   | Status are: Running,Disabled,ErrorDisabled,ForcedReboot-Prompt,PendingReboot-Prompt,RequiredReboot-Prompt,NoReboot-Needed,Rebooted-NoUser
-| PendingRebootWhenRan | 0 or 1                | Logs if Pending Reboot key exists
-| SleepRandomKey      | Random 0-300 | logs random number for first use, always use this key for this instance (1 to 5 minutes)
-| LastRebootDate      | Date           | Logs last time the system rebooted
-| PolicyStartTime     | Date           | Logs when script started
-| UserLoggedinWhenRan | username       | Logs if a user is logged in (actively or inactively)
-| PolicyEndTime       | Date           | Logs when script ends
-|PromptActionResponse1 | Hide/Reboot   | Logs reponse for first prompt
-|PromptActionResponse2 | Hide/Reboot   | Logs reponse for second prompt
+| LastResult          | <Status>   | Status are: Running,Disabled,ErrorDisabled,ForcedReboot-Prompt,PendingReboot-Prompt,RequiredReboot-Prompt,NoReboot-Needed,Rebooted-NoUser |
+| PendingRebootWhenRan | 0 or 1                | Logs if Pending Reboot key exists |
+| SleepRandomKey      | Random 0-300 | logs random number for first use, always use this key for this instance (1 to 5 minutes) |
+| LastRebootDate      | Date           | Logs last time the system rebooted |
+| PolicyStartTime     | Date           | Logs when script started |
+| UserLoggedinWhenRan | username       | Logs if a user is logged in (actively or inactively) |
+| PolicyEndTime       | Date           | Logs when script ends |
+|PromptActionResponse1 | Hide/Reboot   | Logs reponse for first prompt |
+|PromptActionResponse2 | Hide/Reboot   | Logs reponse for second prompt |
 
 ## GPO Policy
 ### Script can also be controlled by a GPO policy. Key will be located here: 'HKLM:SOFTWARE\Policies\RebootPolicy'
@@ -60,13 +60,13 @@ Script logs entries into the registry under "HKLM:SOFTWARE\Policies\<Company nam
 ## Status 
 | Value                  | Comments                 |
 |-------------------     |--------------------------|
-| Running                | Script is running
+| Running                | Script is running |
 | Disabled               | Script is disabled either by GPO or ScriptDisabled parameter |
 | ErrorDisabled          | Script Errored because it rebooted system mor than MaxReboots |
 | ForcedReboot-Prompt    | Script parameter $IgnoreRebootCheck is triggered and prompted user |
 | PendingReboot-Prompt   | Script detected a pending reboot is required and prompted user |
-| RequiredReboot-Prompt  | Script detected a reboot is required based last reboot is greater than RebootIntervalDays and prompted user
-| NoReboot-Needed        | Script detected no reboot required and notified user
-| Rebooted-NoUser        | Script detected no user is logged in and it will reboot the system with no prompt
+| RequiredReboot-Prompt  | Script detected a reboot is required based last reboot is greater than RebootIntervalDays and prompted user |
+| NoReboot-Needed        | Script detected no reboot required and notified user |
+| Rebooted-NoUser        | Script detected no user is logged in and it will reboot the system with no prompt |
 
 
