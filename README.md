@@ -3,6 +3,8 @@ Reboot Policy using PowerShell and a modified verison of AppdeployToolkit
 
 ![Alt_text](https://github.com/PowerShellCrack/PSRebootPolicy/blob/master/screenshots/rebootpolicy_firstprompt.png?raw=true)
 
+![Alt_text](https://github.com/PowerShellCrack/PSRebootPolicy/blob/master/screenshots/rebootpolicy_forcereboot.png?raw=true)
+
 # Goal
 I needed a way I can reboot a system but give the user 3 prompts before doing so at different time intevals. Also to report those responses to management. 
 
