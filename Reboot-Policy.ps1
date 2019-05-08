@@ -74,8 +74,8 @@ Try {
 	##* VARIABLE DECLARATION
 	##*===============================================
 	## Variables: Application
-	[string]$appVendor = 'Your Company'
-	[string]$appName = 'Reboot Policy'
+	[string]$appVendor = 'PowershellCrack'
+	[string]$appName = 'RebootPolicy Tool'
 	[string]$appVersion = '4.0'
 	[string]$appScriptVersion = '1.0.0'
 	[string]$appScriptDate = '04/19/2018'
