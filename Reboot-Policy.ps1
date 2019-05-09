@@ -74,12 +74,12 @@ Try {
 	##* VARIABLE DECLARATION
 	##*===============================================
 	## Variables: Application
-	[string]$appVendor = 'PowershellCrack'
+	[string]$appVendor = ''
 	[string]$appName = 'RebootPolicy Tool'
 	[string]$appVersion = '4.0'
-	[string]$appScriptVersion = '1.0.0'
-	[string]$appScriptDate = '04/19/2018'
-	[string]$appScriptAuthor = 'Richard Tracy'
+	[string]$appScriptVersion = '2.2.0'
+	[string]$appScriptDate = '05/08/2019'
+	[string]$appScriptAuthor = 'PowershellCrack'
 	##*===============================================
 	## Variables: Install Titles (Only set here to override defaults set by the toolkit)
 	[string]$installName = ''
