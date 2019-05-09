@@ -3,6 +3,8 @@ Reboot Policy using PowerShell and a modified verison of AppdeployToolkit
 
 ![Alt_text](https://github.com/PowerShellCrack/PSRebootPolicy/blob/master/screenshots/rebootpolicy_firstprompt.png?raw=true)
 
+![Alt_text](https://github.com/PowerShellCrack/PSRebootPolicy/blob/master/screenshots/rebootpolicy_firstballaonhide.png?raw=true)
+
 ![Alt_text](https://github.com/PowerShellCrack/PSRebootPolicy/blob/master/screenshots/rebootpolicy_forcereboot.png?raw=true)
 
 # Goal
